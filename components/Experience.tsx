@@ -6,9 +6,9 @@ import { Button } from "./ui/MovingBorders";
 const Experience = () => {
   return (
     <section id="experience" className="py-20 w-full">
-      <h1 className="heading">
+      <h2 className="heading">
         My <span className="text-purple">work experience</span>
-      </h1>
+      </h2>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
         {workExperience.map((card) => (

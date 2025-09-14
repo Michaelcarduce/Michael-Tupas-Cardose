@@ -74,19 +74,49 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
+    title: "GlowSimcha",
+    des: "Business to Consumer E-commerce Website built with MERN Stack",
+    img: "/GlowSimcha.webp",
+    iconLists: [
+      "/nextjs.webp",
+      "/expressjs.jpeg",
+      "/postgress.webp",
+      "/socketio.webp",
+      "/ts.webp",
+      "/tailwind.webp",
+      "/shadcn.webp",
+    ],
+    link: "https://glow-simcha.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "Chat Prototype",
+    des: "Real-time chat application prototype using Next.js and Socket.io",
+    img: "/Chat prototype.webp",
+    iconLists: [
+      "/nextjs.webp",
+      "/expressjs.jpeg",
+      "/socketio.webp",
+      "/ts.webp",
+      "/tailwind.webp",
+    ],
+    link: "https://chat-prototype-client.onrender.com/",
+  },
+  {
+    id: 10,
     title: "MERN Chat Application",
     des: "A simple chat application with real-time messaging capabilities.",
     img: "/project-mern chat app.webp",
     iconLists: ["/re.svg", "/expressjs.jpeg", "/nodejs.png", "/mongodb.png"],
-    link: "/",
+    link: "https://github.com/Michaelcarduce/Chat-App",
   },
   {
-    id: 2,
+    id: 20,
     title: "AudioScribe",
     des: "Text-to-Speech, Speech-to-Text, Replace Audio MERN Stack Application",
     img: "/project-AusioScribe.webp",
     iconLists: ["/re.svg", "/expressjs.jpeg", "/nodejs.png", "/mongodb.png"],
-    link: "/",
+    link: "https://github.com/Michaelcarduce/AudioScribe4",
   },
 ];
 

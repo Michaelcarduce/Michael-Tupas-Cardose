@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3200",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -13,6 +13,7 @@
     "@react-spring/three": "^9.7.5",
     "@react-three/drei": "^9.105.4",
     "@react-three/fiber": "^8.18.0",
+    "@shadergradient/react": "^2.3.4",
     "@tabler/icons-react": "^3.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",

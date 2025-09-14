@@ -49,9 +49,9 @@ export const TextGenerateEffect = ({
       {/* mt-4 to my-4 */}
       <div className="my-4">
         {/* remove  text-2xl from the original */}
-        <div className=" dark:text-white text-black leading-snug tracking-wide">
+        <h1 className=" dark:text-white text-black leading-snug tracking-wide">
           {renderWords()}
-        </div>
+        </h1>
       </div>
     </div>
   );

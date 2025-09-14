@@ -5,6 +5,22 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import TypewriterEffect from "./ui/TypewriterEffect";
 import WavingHand from "./ui/WavingHand";
 import Image from "next/image";
+// import dynamic from "next/dynamic";
+// ShaderGradient doesnt work with SSR
+// import { ShaderGradientCanvas, ShaderGradient } from "@shadergradient/react";
+// const ShaderGradientCanvas = dynamic(
+//   () => import("@shadergradient/react").then((mod) => mod.ShaderGradientCanvas),
+//   {
+//     ssr: false,
+//     loading: () => (
+//       <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-blue-900/20 animate-pulse rounded-lg" />
+//     ),
+//   }
+// );
+// const ShaderGradient = dynamic(
+//   () => import("@shadergradient/react").then((mod) => mod.ShaderGradient),
+//   { ssr: false }
+// );
 
 const Hero = () => {
   return (
@@ -29,32 +45,6 @@ const Hero = () => {
          bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
         />
       </div>
-
-      {/* <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-90">
-            Dynamic Portfolio Website Powered by Next.js
-          </p>
-
-          <TextGenerateEffect
-            words="Transforming Ideas into Seamless Digital Solutions"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
-          />
-
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            <WavingHand /> I&apos;m Michael, a{" "}
-            <TypewriterEffect className="text-blue-200" /> from the Philippines.
-          </p>
-
-          <a href="#about">
-            <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
-        </div>
-      </div> */}
 
       <div className="flex justify-between relative my-20 z-10 container mx-auto px-4">
         <div className="w-full lg:max-w-[50vw] flex flex-col items-center lg:items-start justify-center text-center lg:text-left">
@@ -83,6 +73,19 @@ const Hero = () => {
 
         <div className="hidden lg:flex items-center justify-center w-[40vw]">
           <div className="relative w-full h-[500px]">
+            {/* <ShaderGradientCanvas
+              style={{
+                position: "absolute",
+                inset: "0",
+                zIndex: "0",
+              }}
+              pointerEvents="none">
+              <ShaderGradient
+                control="query"
+                urlString="https://www.shadergradient.co/customize?animate=on&axesHelper=off&bgColor1=%23000000&bgColor2=%23000000&brightness=1.4&cAzimuthAngle=150&cDistance=3.6&cPolarAngle=100&cameraZoom=3.2&color1=%233E269C&color2=%233E269C&color3=%23f4dbff&destination=onCanvas&embedMode=off&envPreset=city&format=gif&fov=40&frameRate=10&gizmoHelper=hide&grain=off&lightType=3d&pixelDensity=1.5&positionX=-0.5&positionY=0&positionZ=0&range=enabled&rangeEnd=40&rangeStart=0&reflection=0.1&rotationX=0&rotationY=10&rotationZ=50&shader=defaults&type=sphere&uAmplitude=1&uDensity=1&uFrequency=5.5&uSpeed=0.1&uStrength=1&uTime=0&wireframe=false"
+              />
+            </ShaderGradientCanvas> */}
+
             <Image
               src="/Portfolio Hero Image.webp"
               alt="Hero Image"
