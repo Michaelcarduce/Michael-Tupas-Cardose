@@ -172,16 +172,30 @@ export const workExperience = [
   {
     id: 1,
     title: "Front-End Developer",
-    desc: "Assisted in the development of a web-based platform using React.js, Vue.js, Next.js enhancing interactivity.",
-    className: "md:col-span-2",
+    desc: "Developed and maintained responsive web applications using HTML, CSS, JavaScript/TypeScript, React.js, Next.js, and Vue.js, with Tailwind CSS for styling and Sanity/WordPress for CMS integration. Optimized performance through code splitting, lazy loading, image compression (WebP), and mobile-responsive design. Implemented technical SEO elements like meta tags, structured data, XML sitemaps, and robots.txt; integrated Google Search Console, GA4 for analytics, and GTM for event tracking, resulting in improved site visibility and user engagement.",
+    company: "Central One Bataan Inc.",
+    duration: "April 2024 – August 2024",
+    className: "",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
     title: "Freelance Front-End Developer",
-    desc: "Assisted in the development of a web-based platform using React.js, Vue.js, Next.js enhancing interactivity.",
-    className: "md:col-span-2",
+    desc: "Led frontend development for dynamic web platforms using HTML, CSS, JavaScript/TypeScript, React.js, Next.js, and Vue.js, incorporating advanced UI libraries like shadcn/ui, Framer Motion for animations, and Aceternity UI for modern components. Managed CMS with Sanity and WordPress for custom themes/plugins. Enhanced site performance via optimization techniques including lazy loading, code splitting, and WebP image delivery; ensured cross-device compatibility. Applied SEO best practices with meta tags, schema markup, and Google tools (Search Console, GA4, GTM) to boost search rankings and track user behavior effectively.",
+    company:
+      "Freelance Front-End Developer Absorbed by Previous Company's Client",
+    duration: "August 2024 - Present",
+    className: "",
     thumbnail: "/exp4.svg",
+  },
+  {
+    id: 3,
+    title: "Freelance Wordpress Developer",
+    desc: "Delivered WordPress development by setting up WP Local environment, redesigned navigation with dropdowns for desktop/mobile/tablet screensizes, built and enhanced blog posts, optimized logo, added hero gradients and CTA hover effects, fixed mobile responsiveness, optimized meta titles/descriptions, configured sitemap/robots.txt, integrated Google Tag Manager/Analytics/Bing Webmaster, worked on speed optimization with preload/defer attributes.",
+    company: "Freelance",
+    duration: "August 2025 – Present",
+    className: "",
+    thumbnail: "/exp5.webp",
   },
 ];
 
