@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Michael Tupas Cardose Portfolio",
   description:
-    "A modern & minimal developer portfolio built with Next.js, Tailwind CSS, Aceternity UI, and Framer Motion—crafted with inspiration from JSMastery tutorials.",
+    "A sleek and minimal portfolio crafted with Next.js, Tailwind CSS, Aceternity UI, and Framer Motion for smooth animations and a refined UI.",
 };
 
 export default function RootLayout({

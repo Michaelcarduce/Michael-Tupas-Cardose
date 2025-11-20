@@ -103,7 +103,7 @@ export const projects = [
     link: "https://chat-prototype-client.onrender.com/",
   },
   {
-    id: 10,
+    id: 3,
     title: "MERN Chat Application",
     des: "A simple chat application with real-time messaging capabilities.",
     img: "/project-mern chat app.webp",
@@ -111,12 +111,20 @@ export const projects = [
     link: "https://github.com/Michaelcarduce/Chat-App",
   },
   {
-    id: 20,
+    id: 4,
     title: "AudioScribe",
     des: "Text-to-Speech, Speech-to-Text, Replace Audio MERN Stack Application",
     img: "/project-AusioScribe.webp",
     iconLists: ["/re.svg", "/expressjs.jpeg", "/nodejs.png", "/mongodb.png"],
     link: "https://github.com/Michaelcarduce/AudioScribe4",
+  },
+  {
+    id: 5,
+    title: "My Web Audit",
+    des: "Using the provided Figma design, I built this website as part of my application to demonstrate my front-end development skills, meet the project requirements on time, and able to land a job at HIREAWIZ Web Design & Digital Marketing.",
+    img: "/my-web-audit.webp",
+    iconLists: ["/tailwind.webp", "/html.webp", "/css.webp"],
+    link: "https://web-impact-software-solutions-trial.vercel.app/",
   },
 ];
 
@@ -192,10 +200,19 @@ export const workExperience = [
     id: 3,
     title: "Freelance Wordpress Developer",
     desc: "Delivered WordPress development by setting up WP Local environment, redesigned navigation with dropdowns for desktop/mobile/tablet screensizes, built and enhanced blog posts, optimized logo, added hero gradients and CTA hover effects, fixed mobile responsiveness, optimized meta titles/descriptions, configured sitemap/robots.txt, integrated Google Tag Manager/Analytics/Bing Webmaster, worked on speed optimization with preload/defer attributes.",
-    company: "Freelance",
-    duration: "August 2025 – Present",
+    company: "Randall J. Borden Law Firm",
+    duration: "August 25 – September 14 2025",
     className: "",
-    thumbnail: "/exp5.webp",
+    thumbnail: "/exp1.svg",
+  },
+  {
+    id: 4,
+    title: "Freelance Wordpress Developer",
+    desc: "Built and maintained WordPress pages using Beaver Builder, ensuring clean layout hierarchy, proper spacing, and modern UI design. Customized modules, row/column structures, and global styling to match brand guidelines. Enhanced responsiveness across devices, fixing layout shifts, spacing inconsistencies, and mobile-specific issues. Integrated custom CSS for advanced styling when Beaver Builder modules had limitations. Collaborated on template adjustments and theme edits to achieve exact client specifications.",
+    company: "HIREAWIZ Web Design & Digital Marketing",
+    duration: "October 1 - November 1 2025",
+    className: "",
+    thumbnail: "/exp4.svg",
   },
 ];
 
