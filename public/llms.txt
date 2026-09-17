@@ -1,0 +1,32 @@
+# Michael Tupas Cardose
+
+> Full-stack & mobile developer in Bataan, Philippines. React / TypeScript front ends, a React Native app, and PHP / Node / Cloudflare Workers back ends over MySQL and D1.
+
+Currently a Software Engineer at the Maritime Academy of Asia and the Pacific (MAAP), owning the Online Admission System end to end. Sole engineer on Kosher Kav (React Native + Cloudflare Workers) and GlowSimcha (PHP 8.2 API + React 19, Stripe Connect).
+
+## Case studies
+
+- [Online Admission System (OMAS)](https://michael-cardose.vercel.app/work/omas-admission-system): React 18 + TS SPA over a layered PHP JSON API; 5,000+ live registrations.
+- [Kosher Kav](https://michael-cardose.vercel.app/work/kosher-kav): React Native app + Next.js 16 admin on Cloudflare Workers / D1 / Durable Objects; 1,347 tests.
+- [GlowSimcha](https://michael-cardose.vercel.app/work/glowsimcha): Two-sided booking marketplace; 87 REST endpoints, Stripe Connect, self-hosted WebSockets, MySQL SPATIAL.
+- [Public Health Information System](https://michael-cardose.vercel.app/work/public-health-is): Laravel 12 + React 19 with z-score outbreak detection; ~900 tests.
+
+## Writing
+
+Short write-ups, one production defect or decision each (symptom → diagnosis → fix → test):
+
+- [The map that felt slow: a counter against a stale denominator](https://michael-cardose.vercel.app/writing/map-markers-re-rasterizing)
+- [The cache that was documented but didn't exist](https://michael-cardose.vercel.app/writing/session-cache-written-on-resolve)
+- [The button that dropped accessibilityLabel](https://michael-cardose.vercel.app/writing/obutton-allow-list)
+- [Two applicants, one seat: fixing an overbooking race with a row lock](https://michael-cardose.vercel.app/writing/exam-center-overbooking)
+- [Session auth without a library, twice](https://michael-cardose.vercel.app/writing/session-auth-without-a-library)
+- [Breaking out of a white-label template](https://michael-cardose.vercel.app/writing/breaking-out-of-white-label)
+
+## Links
+
+- [Writing](https://michael-cardose.vercel.app/writing)
+
+- [All work](https://michael-cardose.vercel.app/work)
+- [Resume (PDF)](https://michael-cardose.vercel.app/Michael%20Tupas%20Cardose%20Resume.pdf)
+- [GitHub](https://github.com/Michaelcarduce)
+- [LinkedIn](https://www.linkedin.com/in/michael-cardose-47294325b/)
