@@ -8,6 +8,8 @@ import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import Testimonials from "@/components/Testimonials";
 import RecentProjects from "@/components/RecentProjects";
+import OpenSource from "@/components/OpenSource";
+import GitHubActivity from "@/components/GitHubActivity";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 
 const Home = () => {
@@ -20,6 +22,8 @@ const Home = () => {
         <Hero />
         <Grid />
         <RecentProjects />
+        <OpenSource />
+        <GitHubActivity />
         <Skills />
         <Experience />
         <Approach />
