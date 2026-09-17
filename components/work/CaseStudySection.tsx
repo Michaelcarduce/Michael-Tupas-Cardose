@@ -22,6 +22,20 @@ const CaseStudySection = ({ section }: { section: Section }) => {
             ))}
           </ul>
         )}
+        {section.links && (
+          <p className="flex flex-wrap gap-x-6 gap-y-2 pt-2">
+            {section.links.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple hover:underline">
+                {l.label} ↗
+              </a>
+            ))}
+          </p>
+        )}
       </div>
     </section>
   );

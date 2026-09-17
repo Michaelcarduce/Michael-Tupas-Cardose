@@ -8,6 +8,7 @@ export type CaseStudySection = {
   heading: string;
   paragraphs: string[];
   bullets?: string[];
+  links?: CaseStudyLink[]; // public repos extracted from this project
 };
 
 export type CaseStudy = {
@@ -124,6 +125,13 @@ export const caseStudies: CaseStudy[] = [
         heading: "Evidence",
         paragraphs: [
           "Source is not published — it is an employer's live production service. The applicant flow itself is public during admission periods; the screenshot below is step 2 of the wizard filled with my own details, no applicant data. Happy to walk through the architecture and the concurrency fix in an interview.",
+          "The API layering — router, controller, service, repository, PDO — is extracted with the business logic removed into a public starter with PHPUnit and CI.",
+        ],
+        links: [
+          {
+            label: "php-psr4-api-starter on GitHub",
+            href: "https://github.com/Michaelcarduce/php-psr4-api-starter",
+          },
         ],
       },
     ],
@@ -224,6 +232,17 @@ export const caseStudies: CaseStudy[] = [
         heading: "Evidence",
         paragraphs: [
           "Source is private under the client agreement. The screenshots above are from the app; restaurant listings, menus and videos come from the client's live ordering.co tenant. Happy to demo the Videos tab, the map discovery flow and the Durable Object rate limiter on a call.",
+          "Two pieces are public: the polyline decoder, with the Google reference-vector and malformed-input tests, and the Durable Object token-bucket rate limiter, tested inside workerd.",
+        ],
+        links: [
+          {
+            label: "polyline-decode on GitHub",
+            href: "https://github.com/Michaelcarduce/polyline-decode",
+          },
+          {
+            label: "do-token-bucket on GitHub",
+            href: "https://github.com/Michaelcarduce/do-token-bucket",
+          },
         ],
       },
     ],
@@ -371,6 +390,13 @@ export const caseStudies: CaseStudy[] = [
         heading: "Evidence",
         paragraphs: [
           "The app is live at glow-simcha.vercel.app. Source is private; the screenshots below are from a test account with seeded artists and bookings, no real clients. Happy to screen-share the payment webhook handling, the spatial query and the WebSocket reconnect logic.",
+          "The API skeleton — router, controller, service, repository, PDO, PSR-4 — is public as a starter with the business logic removed.",
+        ],
+        links: [
+          {
+            label: "php-psr4-api-starter on GitHub",
+            href: "https://github.com/Michaelcarduce/php-psr4-api-starter",
+          },
         ],
       },
     ],
