@@ -40,7 +40,7 @@
 //     <button
 //       onClick={handleDownload}
 //       disabled={isDownloading}
-//       className={`relative overflow-hidden px-6 py-3 rounded-lg font-medium text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 transition-all duration-300 mt-5 md:mt-8
+//       className={`relative overflow-hidden px-6 py-3 rounded-lg font-medium text-white bg-linear-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 transition-all duration-300 mt-5 md:mt-8
 //         ${isDownloading ? "cursor-not-allowed" : "cursor-pointer"}
 //         ${
 //           isComplete
@@ -185,15 +185,14 @@ const DownloadButton = () => {
     <button
       onClick={handleDownload}
       disabled={isDownloading || isComplete}
-      className={`relative overflow-hidden px-6 py-3 rounded-lg font-medium text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 transition-all duration-300 mt-5 md:mt-8
+      className={`relative overflow-hidden px-6 py-3 rounded-lg font-medium text-white bg-linear-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 transition-all duration-300 mt-5 md:mt-8
         ${isDownloading ? "cursor-not-allowed opacity-90" : "cursor-pointer"}
         ${
           isComplete
-            ? "!bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700"
+            ? "bg-linear-to-r! from-green-500 to-green-600 hover:from-green-600 hover:to-green-700"
             : ""
         }
-      `}
-      aria-label={isComplete ? "Download complete" : "Download resume"}>
+      `}>
       <span className="relative z-10 flex items-center justify-center">
         {isComplete ? (
           <span className="flex items-center">

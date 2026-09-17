@@ -1,7 +1,15 @@
-import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+"use client";
 
-import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
+import React from "react";
+import { AnimatePresence, motion } from "motion/react";
+import dynamic from "next/dynamic";
+
+// The shader canvas only mounts on hover; loading it lazily keeps three.js and
+// react-three-fiber out of the first-load bundle (same approach as the globe).
+const CanvasRevealEffect = dynamic(
+  () => import("./ui/CanvasRevealEffect").then((m) => m.CanvasRevealEffect),
+  { ssr: false }
+);
 
 const Approach = () => {
   return (
@@ -13,11 +21,12 @@ const Approach = () => {
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         {/* add des prop */}
         <Card
-          title="Planning & Strategy"
+          title="Scope & plan"
           icon={<AceternityIcon order="Phase 1" />}
-          des="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
-          navigation, and content requirements.">
+          des="I start by writing down what the system has to do, what it
+          inherits (legacy schema, vendor lock, free tier) and what is
+          non-negotiable. Then a short plan: data model, API surface, screens,
+          and the tests that prove each one.">
           <CanvasRevealEffect
             animationSpeed={5.1}
             // add these classed for the border rounded overflowing -> rounded-3xl overflow-hidden
@@ -25,11 +34,11 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Development & Progress Update"
+          title="Build, test, demo"
           icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way.">
+          des="Small, reviewable changes with tests alongside, CI green on
+          every push, and a working build you can click through each week.
+          Accessibility and performance are checked as I go, not at the end.">
           <CanvasRevealEffect
             animationSpeed={3}
             // change bg-black to bg-pink-900
@@ -43,14 +52,14 @@ const Approach = () => {
           />
           {/* Radial gradient for the cute fade */}
           {/* remove this one */}
-          {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
+          {/* <div className="absolute inset-0 mask-[radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
         </Card>
         <Card
-          title="Development & Launch"
+          title="Launch & measure"
           icon={<AceternityIcon order="Phase 3" />}
-          des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up.">
+          des="Release with a runbook, backups with a verified restore, and
+          monitoring you can read. After launch I watch the real numbers —
+          Core Web Vitals, errors, conversions — and fix what they show.">
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-sky-600 rounded-3xl overflow-hidden"
@@ -81,9 +90,9 @@ const Card = ({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      // change h-[30rem] to h-[35rem], add rounded-3xl
-      className="border border-black/[0.2] group/canvas-card flex items-center justify-center
-       dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative lg:h-[35rem] rounded-3xl "
+      // change h-120 to h-[35rem], add rounded-3xl
+      className="border border-black/20 group/canvas-card flex items-center justify-center
+       dark:border-white/20  max-w-sm w-full mx-auto p-4 relative lg:h-140 rounded-3xl "
       style={{
         //   add these two
         //   you can generate the color from here https://cssgradient.io/
@@ -141,9 +150,9 @@ const AceternityIcon = ({ order }: { order: string }) => {
     <div>
       {/* this btn is from https://ui.aceternity.com/components/tailwindcss-buttons border magic */}
       {/* change rounded-lg, text-purple px-5 py-2 */}
-      {/* remove focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 cuz we don't need to focus */}
+      {/* remove focus:outline-hidden focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 cuz we don't need to focus */}
       {/* remove text-sm font-medium h-12 , add font-bold text-2xl */}
-      <button className="relative inline-flex overflow-hidden rounded-full p-[1px] ">
+      <button className="relative inline-flex overflow-hidden rounded-full p-px ">
         <span
           className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]
          bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
@@ -176,7 +185,10 @@ const AceternityIcon = ({ order }: { order: string }) => {
   );
 };
 
-export const Icon = ({ className, ...rest }: any) => {
+export const Icon = ({
+  className,
+  ...rest
+}: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
