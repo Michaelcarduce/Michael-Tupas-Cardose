@@ -38,7 +38,18 @@ const CaseStudyMeta = ({
       ),
     },
   ];
-  if (meta.live) rows.push({ label: "Live", value: <ExternalLink {...meta.live} /> });
+  if (meta.live)
+    rows.push({
+      label: "Live",
+      value: (
+        <>
+          <ExternalLink {...meta.live} />
+          {meta.liveNote && (
+            <p className="mt-1 text-xs text-white-100/60">{meta.liveNote}</p>
+          )}
+        </>
+      ),
+    });
   if (meta.store) rows.push({ label: "Store", value: <ExternalLink {...meta.store} /> });
   rows.push({
     label: "Source",

@@ -22,6 +22,8 @@ export type CaseStudy = {
     platform: string;
     stack: string[];
     live?: CaseStudyLink;
+    /** Caveat shown under the Live row — e.g. a showcase deploy, not the client's. */
+    liveNote?: string;
     store?: CaseStudyLink;
     source: string; // "Private — details limited by client agreement" | repo URL
   };
@@ -488,6 +490,12 @@ export const caseStudies: CaseStudy[] = [
         "Recharts",
         "GitHub Actions",
       ],
+      live: {
+        label: "phis-bpsu.onrender.com",
+        href: "https://phis-bpsu.onrender.com/",
+      },
+      liveNote:
+        "Showcase deployment only — Render + TiDB Cloud, seeded with synthetic health data and connected to no real patient records. The client's actual deployment is on-premises (Apache 2.4 + MySQL 5.7 on a LAN).",
       source: "Private repository",
     },
     metrics: [
@@ -548,7 +556,8 @@ export const caseStudies: CaseStudy[] = [
         id: "evidence",
         heading: "Evidence",
         paragraphs: [
-          "Source is private. The screenshots below are from a seeded demo instance — aggregate counts only, no patient records. Happy to walk through the z-score baseline and the choropleth pipeline on a call.",
+          "Source is private, but the demo above is live: a showcase instance on Render with TiDB Cloud behind it, seeded with synthetic health data. The client's own deployment is on-premises — Apache 2.4 and MySQL 5.7 on a LAN — and nothing public touches real patient records.",
+          "The screenshots below come from that same seeded instance — aggregate counts only. Happy to walk through the z-score baseline and the choropleth pipeline on a call.",
         ],
       },
     ],
